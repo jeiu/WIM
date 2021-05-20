@@ -10,7 +10,7 @@ public class Main {
 		
 		itemmap.putItemList();
 		
-		itemmap.delItemList();
+		itemmap.findItem();
 		
 	
 	}
