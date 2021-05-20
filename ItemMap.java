@@ -1,4 +1,5 @@
 package wim;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -8,7 +9,6 @@ public class ItemMap {
 
 	HashMap<String, String[]> itemList = new HashMap<String,String[]>();
 
-	
 	// 상품등록 메소드
 	public void putItemList() {
 		//지역변수 지정
@@ -63,10 +63,6 @@ public class ItemMap {
 			}
 		}
 	}
-	//상품등록 메소드 종료
-	
-	
-	
 	
 	//상품삭제 메소드
 	public void delItemList() {
@@ -114,15 +110,33 @@ public class ItemMap {
 			}
 		}
 	}
-	//상품삭제 메소드 종료
-	
-	
 	
 	//상품조회 메소드
 	public void findItem() {
-		String findName;
+		String search;
+		String[] search_values;
+	
+		while(true) {
+			System.out.print("검색하실 상품의 이름이나 코드를 입력하세요 : ");
+			search = scan.next();
+			
+			// 입력한 값이 해쉬맵 안의 키값이 존재할 때
+			if(itemList.containsKey(search)) {
+				search_values = itemList.get(search);
+				System.out.println(search_values[0]);
+			} else {
+				System.out.println("잘못 입력하셨습니다 다시 입력해주세요.");
+				break;
+			}
+		}
 	}
 	
-	
-	
+	//물품 총 금액 메소드 (진행중)
+	public void allItemPrices() {
+		Collection<String[]> allitems;
+		String itemkeys;
+		
+		allitems = itemList.values();
+		System.out.println(allitems);
+	}
 }
