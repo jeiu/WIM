@@ -114,6 +114,7 @@ public class ItemMap {
 	//상품조회 메소드
 	public void findItem() {
 		String search;
+		String quest;
 		String[] search_values;
 	
 		while(true) {
@@ -125,7 +126,16 @@ public class ItemMap {
 				search_values = itemList.get(search);
 				System.out.println(search_values[0]);
 			} else {
-				System.out.println("잘못 입력하셨습니다 다시 입력해주세요.");
+				System.out.println("잘못 입력하셨습니다.");
+			}
+			
+			System.out.println("상품 조회를 계속하시겠습니까?");
+			quest = scan.next();
+			
+			if(quest.equals("Y") || quest.equals("y")) {
+				System.out.println("상품 조회를 계속합니다");
+			}else if(quest.equals("n") || quest.equals("N")) {
+				System.out.println("상품 조회를 종료합니다.\n초기 메뉴로 돌아갑니다.");
 				break;
 			}
 		}
