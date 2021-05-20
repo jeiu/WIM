@@ -161,26 +161,35 @@ public class ItemMap {
 		}
 	}
 	
-	//==========물품 총 금액 메소드 (진행중)==========
+	//==========물품 총 금액 메소드==========
 	public void allItemPrices() {
 		Set<String> keys = itemList.keySet();
 		int total;
 		String price;
 		int priceInt;
-		String[] value;
+		String Count;
+		int countInt;
+		String[] Value;
 		
-		total = 0;
+
 		for(String key : keys) {
+			total = 0;
 			price = itemList.get(key)[0];
+			price = price.replaceAll("[^0-9]", "");
 			priceInt = Integer.valueOf(price);
-			total += priceInt;
+			
+			Count = itemList.get(key)[1];
+			Count = Count.replaceAll("[^0-9]", "");
+			countInt = Integer.valueOf(Count);
+			
+			total += (priceInt*countInt);
 			
 			System.out.println(key);
 			for(int i=0; i<3; i++) {
 				System.out.println(itemList.get(key)[i]);
 			}
 		
-		System.out.println("상품재고의 총 금액 : "+total);
+		System.out.println(key+"재고의 총 금액 : "+total);
 		}
 	}
 }
