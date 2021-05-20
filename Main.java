@@ -10,31 +10,31 @@ public class Main {
 		int choose, choose2;
 		
 		while(true) {
-			System.out.println("----- ë¬¼ë¥˜ ì¬ê³ ê´€ë¦¬ ì‹œìŠ¤í…œ -----");
-			System.out.println("       1. ì…ì¶œê³  ê´€ë¦¬");
-			System.out.println("       2. ì¬ê³  í™•ì¸");
-			System.out.println("       3. ë§¤ì¶œ í™•ì¸");
-			System.out.println("       4. ì¢…ë£Œ");
+			System.out.println("----- ¹°·ù Àç°í°ü¸® ½Ã½ºÅÛ -----");
+			System.out.println("       1. ÀÔÃâ°í °ü¸®");
+			System.out.println("       2. Àç°í È®ÀÎ");
+			System.out.println("       3. ¸ÅÃâ È®ÀÎ");
+			System.out.println("       4. Á¾·á");
 			System.out.println("----------------------------");
-			System.out.print("ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš” : ");
+			System.out.print("¹øÈ£¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä : ");
 			
 			choose = scan.nextInt();
 			
 			switch(choose) {
 				case 1:
-					System.out.println("1. ì¬ê³  ë“±ë¡");
-					System.out.println("2. ì¬ê³  ì‚­ì œ");
+					System.out.println("1. Àç°í µî·Ï");
+					System.out.println("2. Àç°í »èÁ¦");
 					
 					choose2 = scan.nextInt();
 					
 					if(choose2 == 1) { im.putItemList(); }
-					else if(choose == 2) {}
+					else if(choose == 2) {im.delItemList(); }
 					else { break; }
 
 					break;
 				case 2:
-					System.out.println("1. ì¬ê³  ê²€ìƒ‰");
-					System.out.println("2. ì¬ê³  ì´ ê¸ˆì•¡ í™•ì¸");
+					System.out.println("1. Àç°í °Ë»ö");
+					System.out.println("2. Àç°í ÃÑ ±İ¾× È®ÀÎ");
 					
 					choose2 = scan.nextInt();
 					
@@ -44,11 +44,11 @@ public class Main {
 
 					break;
 				case 3:
-					System.out.println("1. êµ¬ì… ì´ê³„");
-					System.out.println("2. íŒë§¤ ì´ê³„");
+					System.out.println("1. ±¸ÀÔ ÃÑ°è");
+					System.out.println("2. ÆÇ¸Å ÃÑ°è");
 					break;
 				default:
-					System.out.println("ë‹¤ì‹œ ì…ë ¥í•´ ì£¼ì„¸ìš”");
+					System.out.println("´Ù½Ã ÀÔ·ÂÇØ ÁÖ¼¼¿ä");
 					break;
 			}
 			
